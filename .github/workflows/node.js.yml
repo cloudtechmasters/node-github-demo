@@ -38,7 +38,9 @@ jobs:
         username: ${{ secrets.SSH_USER}}
         password: ${{ secrets.SSH_PASS }}
         script: |
-          cd ~/node-github-demo
+          cd /opt
+          git clone https://github.com/cloudtechmasters/node-github-demo.git
+          cd /opt/node-github-demo
           git pull origin main
           npm install --production
           pm2 restart node-app

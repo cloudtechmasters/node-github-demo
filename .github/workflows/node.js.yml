@@ -43,4 +43,4 @@ jobs:
           cd /opt/node-github-demo
           git pull origin main
           npm install --production
-          pm2 restart node-app
+          pm2 restart index.js
